@@ -63,7 +63,7 @@ export default function TickerSearch() {
       {/* Search Results */}
       {!isLoading && searchResults?.length > 0 && (
         <ClickAwayListener onClickAway={() => setSearchResults([])}>
-          <div className="w-full rounded-md absolute top-11 bg-white text-black max-h-[400px] overflow-y-scroll shadow-2xl ring-1 ring-black ring-opacity-5">
+          <div className="z-20 w-full rounded-md absolute top-11 bg-white text-black max-h-[400px] overflow-y-scroll shadow-2xl ring-1 ring-black ring-opacity-5">
             <ul className='divide-y divide-gray-200'>
               {searchResults.map((result) => (
                 <li key={result['1. symbol']} className='py-4 px-6 hover:bg-gray-50 cursor-pointer'>
