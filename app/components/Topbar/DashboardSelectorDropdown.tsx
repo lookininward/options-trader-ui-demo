@@ -44,7 +44,12 @@ const DASHBOARD_LINKS = [
         href: '/',
         disabled: true,
     },
-
+    {
+        title: 'Mortgages',
+        description: 'Mortgages, refinancing, and home loans',
+        href: '/',
+        disabled: true,
+    },
 ];
 
 const DashboardSelectorDropdown: React.FC = () => {

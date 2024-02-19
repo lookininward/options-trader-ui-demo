@@ -12,6 +12,7 @@ import {
     OptionsTransaction
 } from "@/app/types/options";
 import OptionsHeader from "../Options/OptionsHeader";
+import Card from "../Card";
 
 export default function Options() {
     const [selectedDate, setSelectedDate] = useState<dayjs.Dayjs>(dayjs());
@@ -34,9 +35,9 @@ export default function Options() {
                 <h3 className='text-md font-bold text-gray-600 mb-3 cursor-pointer'>Order</h3>
                 <h3 className='pl-3 text-md font-bold text-teal-700 mb-3 cursor-pointer'>Options</h3>
             </div>
-            <div className="w-full bg-white p-10 rounded-xl shadow-lg border">
+            <Card>
                 <div className="w-full flex flex-col items-center justify-center gap-y-6">
-                    <div className="w-full flex items-center justify-between">
+                    <div className="w-full flex flex-col md:flex-row items-center justify-between gap-y-3">
                         <OptionsHeader optionsTransaction={selectedAction} />
                         <MobileDatePicker value={selectedDate} onChange={onSelectDate} slotProps={{ textField: { size: 'small' } }} />
                     </div>
@@ -44,7 +45,7 @@ export default function Options() {
                     <ActionTypeSelector selectedAction={selectedAction} onSelectAction={onSelectAction} />
                     <OptionsSelector selectedAction={selectedAction} />
                 </div>
-            </div>
+            </Card>
         </div>
     );
 }

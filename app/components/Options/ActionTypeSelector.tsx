@@ -6,7 +6,7 @@ const ActionTypeSelector = ({ selectedAction, onSelectAction }: {
     onSelectAction: (action: OptionsAction, type: OptionsActionType) => void;
 }) => {
     return (
-        <div className="w-full flex justify-between">
+        <div className="w-full flex justify-center md:justify-between gap-x-4 md:gap-x-0">
             <div className="flex">
                 {ActionTypeBtn({
                     label: 'Buy',

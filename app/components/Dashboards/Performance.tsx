@@ -5,6 +5,7 @@ import { useEffect, useState, useRef } from 'react';
 import { Line } from 'react-chartjs-2';
 import { ChartOptions } from './ChartOptions';
 import { aaplData } from '@/app/data/aapl';
+import Card from '../Card';
 
 ChartJS.register(
     Filler,
@@ -135,7 +136,7 @@ export default function Performance() {
     return (
         < div >
             <h3 className='text-md font-bold text-gray-600 mb-3'>Performance</h3>
-            <div className="bg-white p-10 rounded-xl shadow-lg border">
+            <Card>
                 <div className="text-2xl font-bold">
                     $182.31 {aaplData.currency}
                 </div>
@@ -147,20 +148,20 @@ export default function Performance() {
                 />
 
                 {/* Date Range Selector */}
-                <div className='w-full flex justify-center'>
+                <div className='w-full flex justify-center my-4 md:my-0'>
                     <div className="flex gap-x-2">
                         {Object.keys(TimeRanges).map((range) => (
                             <button
                                 key={range}
                                 onClick={() => setSelectedRange(range)}
-                                className={`px-3 py-2 rounded-3xl font-semibold ${selectedRange === range ? 'bg-slate-500 text-white' : 'text-slate-500'}`}
+                                className={`px-2 py-1 md:px-3 md:py-2 rounded-3xl font-semibold ${selectedRange === range ? 'bg-slate-500 text-white' : 'text-slate-500'}`}
                             >
                                 {TimeRanges[range as keyof typeof TimeRanges].label}
                             </button>
                         ))}
                     </div>
                 </div>
-            </div>
+            </Card>
         </div >
 
 

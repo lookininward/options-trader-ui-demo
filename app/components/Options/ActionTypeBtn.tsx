@@ -14,7 +14,7 @@ const ActionTypeBtn = ({
 }) => (
     <button
         className={classNames(
-            "py-1 px-8 border text-sm",
+            "py-1 px-3 md:px-8 border text-sm",
             isSelected ? 'bg-slate-600 text-gray-100' : 'bg-slate-100 text-gray-800',
             roundedClass
         )}

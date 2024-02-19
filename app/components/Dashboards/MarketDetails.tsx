@@ -1,4 +1,5 @@
 import { aaplData as data } from "@/app/data/aapl";
+import Card from "../Card";
 
 const MarketDetailItem = ({ label, value }: { label: string; value: string }) => (
     <div className="flex items-center justify-between text-sm">
@@ -11,7 +12,7 @@ export default function MarketDetails() {
     return (
         < div >
             <h3 className='text-md font-bold text-gray-600 mb-3'>Market Details</h3>
-            <div className="bg-white p-10 rounded-xl shadow-lg border">
+            <Card>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2'>
                     <div className="grid grid-cols-1 gap-x-12 gap-y-2">
                         <MarketDetailItem label="Bid" value={`${data.Bid.Price} x ${data.Bid.Quantity}`} />
@@ -32,7 +33,7 @@ export default function MarketDetails() {
                         <MarketDetailItem label="Yield" value={data.Yield} />
                     </div>
                 </div>
-            </div>
+            </Card>
         </div >
     );
 }

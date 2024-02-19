@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { news } from "@/app/data/news";
+import Card from '../Card';
 
 const NewsItem = ({ source, title, timeAgo }: { source: string; title: string; timeAgo: string }) => (
     <a href="#" className="flex flex-col items-start py-4 px-4 gap-y-2 hover:bg-gray-100">
@@ -12,14 +13,15 @@ const NewsItem = ({ source, title, timeAgo }: { source: string; title: string; t
 export default function News() {
     const [visibleNews, setVisibleNews] = useState(3);
     const showAllNews = () => setVisibleNews(news.length);
+
     return (
         <div>
             <h3 className='text-md font-bold text-gray-600 mb-3'>News</h3>
-            <div className="bg-white p-10 rounded-xl flex flex-col divide-y divide-gray-400 shadow-lg border">
+            <Card className="px-0 md:px-5 flex flex-col divide-y divide-gray-400">
                 {news.slice(0, visibleNews).map((item, index) => (
                     <NewsItem key={index} {...item} />
                 ))}
-            </div>
+            </Card>
             {visibleNews < news.length && (
                 <div className='w-full flex justify-center'>
                     <button

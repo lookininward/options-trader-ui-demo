@@ -13,7 +13,7 @@ const DatePickerHorizontal = ({
 }) => {
     const isSameDate = (date: string) => dayjs(date).isSame(selectedDate, 'day');
     return (
-        <div className="flex flex-row overflow-x-scroll hide-scrollbar whitespace-nowrap max-w-[400px] gap-x-1">
+        <div className="flex flex-row overflow-x-scroll hide-scrollbar whitespace-nowrap max-w-[320px] md:max-w-[400px] gap-x-1">
             {optionsData.dates.map((date, index) => (
                 <button
                     key={index}
