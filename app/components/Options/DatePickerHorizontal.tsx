@@ -11,16 +11,15 @@ const DatePickerHorizontal = ({
     selectedDate: dayjs.Dayjs;
     onSelectDate: (date: dayjs.Dayjs) => void;
 }) => {
+    const isSameDate = (date: string) => dayjs(date).isSame(selectedDate, 'day');
     return (
         <div className="flex flex-row overflow-x-scroll hide-scrollbar whitespace-nowrap max-w-[400px] gap-x-1">
             {optionsData.dates.map((date, index) => (
                 <button
                     key={index}
                     className={classNames(
-                        "text-xs text-gray-100 bg-slate-500 py-1 px-2 rounded-md cursor-pointer",
-                        {
-                            "bg-emerald-600": dayjs(date.value).isSame(selectedDate, 'day'),
-                        }
+                        "text-xs text-gray-100 py-1 px-2 rounded-md cursor-pointer",
+                        isSameDate(date.value) ? "bg-emerald-600" : "bg-slate-500"
                     )}
                     onClick={() => onSelectDate(dayjs(date.value))}
                 >

@@ -15,7 +15,7 @@ export default function News() {
     return (
         <div>
             <h3 className='text-md font-bold text-gray-600 mb-3'>News</h3>
-            <div className="bg-white p-10 rounded-xl max-w-4xl flex flex-col divide-y divide-gray-400 shadow-lg border">
+            <div className="bg-white p-10 rounded-xl flex flex-col divide-y divide-gray-400 shadow-lg border">
                 {news.slice(0, visibleNews).map((item, index) => (
                     <NewsItem key={index} {...item} />
                 ))}

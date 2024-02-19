@@ -34,7 +34,7 @@ export default function Options() {
                 <h3 className='text-md font-bold text-gray-600 mb-3 cursor-pointer'>Order</h3>
                 <h3 className='pl-3 text-md font-bold text-teal-700 mb-3 cursor-pointer'>Options</h3>
             </div>
-            <div className="w-full lg:min-w-[460px] lg:max-w-[500px] bg-white p-10 rounded-xl shadow-lg border">
+            <div className="w-full bg-white p-10 rounded-xl shadow-lg border">
                 <div className="w-full flex flex-col items-center justify-center gap-y-6">
                     <div className="w-full flex items-center justify-between">
                         <OptionsHeader optionsTransaction={selectedAction} />

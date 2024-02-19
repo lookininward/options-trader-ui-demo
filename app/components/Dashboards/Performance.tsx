@@ -135,7 +135,7 @@ export default function Performance() {
     return (
         < div >
             <h3 className='text-md font-bold text-gray-600 mb-3'>Performance</h3>
-            <div className="bg-white p-10 rounded-xl max-w-4xl shadow-lg border">
+            <div className="bg-white p-10 rounded-xl shadow-lg border">
                 <div className="text-2xl font-bold">
                     $182.31 {aaplData.currency}
                 </div>

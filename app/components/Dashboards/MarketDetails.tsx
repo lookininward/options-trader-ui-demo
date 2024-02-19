@@ -11,7 +11,7 @@ export default function MarketDetails() {
     return (
         < div >
             <h3 className='text-md font-bold text-gray-600 mb-3'>Market Details</h3>
-            <div className="bg-white p-10 rounded-xl max-w-4xl shadow-lg border">
+            <div className="bg-white p-10 rounded-xl shadow-lg border">
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2'>
                     <div className="grid grid-cols-1 gap-x-12 gap-y-2">
                         <MarketDetailItem label="Bid" value={`${data.Bid.Price} x ${data.Bid.Quantity}`} />
