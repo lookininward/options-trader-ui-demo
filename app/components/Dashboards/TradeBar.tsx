@@ -9,7 +9,7 @@ export default function TradeBar() {
     const [isWatchlisted, setIsWatchlisted] = useState(false);
 
     return (
-        <div className="w-full flex justify-between items-center mb-10">
+        <div className="w-full flex justify-between items-center">
             <div className="divide-x divide-gray-400 text-2xl font-bold flex gap-x-4">
                 <div className='text-gray-500'>
                     {aaplData.symbol}

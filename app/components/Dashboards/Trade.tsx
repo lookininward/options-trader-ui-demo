@@ -21,7 +21,7 @@ export default function Trade() {
             <News />
             <About />
           </div>
-          <div className='sticky top-10 z-10 self-start mt-12 lg:mt-0'>
+          <div className='sticky top-10 z-10 self-start mt-12 lg:mt-0 w-full'>
             <Options />
           </div>
         </div>

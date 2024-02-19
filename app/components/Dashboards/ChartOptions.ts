@@ -30,7 +30,7 @@ export const ChartOptions = {
         tooltip: {
             enabled: false // This will turn off tooltips which might show "undefined"
         },
-        afterDraw: (chart) => {
+        afterDraw: (chart: any) => {
             const ctx = chart.ctx;
             const chartArea = chart.chartArea;
 
