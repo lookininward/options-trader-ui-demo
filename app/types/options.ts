@@ -12,3 +12,11 @@ export interface OptionsTransaction {
     action: OptionsAction;
     type: OptionsActionType;
 }
+
+export interface OptionContract {
+    strike: number;
+    premium: number;
+    breakEven: number;
+    breakEvenPercent: number;
+    changeFromCurrentPercent: number;
+}
